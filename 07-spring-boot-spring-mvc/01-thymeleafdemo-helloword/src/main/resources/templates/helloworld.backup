@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Thymeleaf Example</title>
+    <!--reference CSS file-->
+    <link rel="stylesheet" th:href="@{/css/demo.css}"><link>
+</head>
+<body>
+<h1 th:text="'Hello, ' + ${name} + '!'">Hello, User!</h1>
+<p th:text="'Time on the server is ' + ${theDate}" class="funny"/>
+</body>
+</html>
