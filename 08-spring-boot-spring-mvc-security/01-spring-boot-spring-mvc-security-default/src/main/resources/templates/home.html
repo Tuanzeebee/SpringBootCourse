@@ -19,6 +19,21 @@
         <br><br>
         Role(s):<span sec:authentication="principal.authorities"></span>
     </p>
+    <div sec:authorize="hasRole('MANAGER')">
+        <p>
+            <!--Add Link to point to /leader this is for the managers-->
+            <a th:href="@{/leaders}">Leadership Meeting</a>
+            (Only for Manager peeps)
+        </p>
+    </div>
+    <div sec:authorize="hasRole('ADMIN')">
+        <p>
+            <!--Add Link to point to /leader this is for the managers-->
+            <a th:href="@{/systems}">IT Systems Meeting</a>
+            (Only for Admin peeps)
+        </p>
+    </div>
+
     <hr>
 
     <!--Add a logout button -->
